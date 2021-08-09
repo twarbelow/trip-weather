@@ -20,9 +20,8 @@ RSpec.describe Brewery do
 
       object = CityBreweries.new(location, forecast, breweries)
 
-      expect(object).to have_attributes(:location => 'location',
-                                        :forecast => {summary: forecast[:current][:weather].first[:description],
-                                        :temperature => "#{forecast[:current][:temp]} F"},
+      expect(object).to have_attributes(:location => location,
+                                        :forecast => {summary: forecast[:current][:weather].first[:description], :temperature => "#{forecast[:current][:temp]} F"},
                                         :breweries => breweries)
     end
   end

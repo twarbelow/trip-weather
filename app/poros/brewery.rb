@@ -4,6 +4,6 @@ class Brewery
   def initialize(data)
     @id = data[:id]
     @name = data[:name]
-    @brewery_type = data[:id]
+    @brewery_type = data[:brewery_type]
   end
 end

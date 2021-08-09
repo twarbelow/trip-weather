@@ -10,7 +10,7 @@ RSpec.describe '/api/v1/forecast?location=denver,co' do
 
     expect(parsed).to have_key(:data)
     expect(parsed[:data].keys).to include(:id, :type, :attributes)
-    expect(parsed[:data][:id]).to eq(null)
+    expect(parsed[:data][:id]).to eq(nil)
     expect(parsed[:data][:type]).to eq('breweries')
     expect(parsed[:data][:attributes].keys).to include(:destination, :forecast, :breweries)
 

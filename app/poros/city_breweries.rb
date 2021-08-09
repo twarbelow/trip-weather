@@ -1,10 +1,10 @@
 class CityBreweries
-  attr_reader :id, :type, :location, :forecast, :breweries
+  attr_reader :id, :type, :destination, :forecast, :breweries
 
   def initialize(location, forecast, breweries)
-    @id = nil
+    @id = "null"
     @type = 'breweries'
-    @location = location
+    @destination = location
     @forecast = {summary: forecast[:current][:weather].first[:description], temperature: "#{forecast[:current][:temp]} F"}
     @breweries = breweries
   end

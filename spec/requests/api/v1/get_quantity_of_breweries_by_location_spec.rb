@@ -7,7 +7,6 @@ RSpec.describe '/api/v1/forecast?location=denver,co' do
     expect(response.status).to eq(200)
 
     parsed = JSON.parse(response.body, symbolize_names: true)
-
     expect(parsed).to have_key(:data)
     expect(parsed[:data].keys).to include(:id, :type, :attributes)
     expect(parsed[:data][:id]).to eq("null")

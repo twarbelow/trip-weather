@@ -13,10 +13,3 @@ class BrewService
     Faraday.new(url: 'https://api.openbrewerydb.org')
   end
 end
-
-
-# by_dist
-# Sort the results by distance from an origin point, denoted by latitude,longitude.
-#
-# Example
-# https://api.openbrewerydb.org/breweries?by_dist=38.8977,77.0365

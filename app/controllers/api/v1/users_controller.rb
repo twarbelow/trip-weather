@@ -3,6 +3,7 @@ class Api::V1::UsersController < ApplicationController
     if user_params[:password] == user_params[:password_confirmation]
       user = User.new(user_params)
       if user.save
+        user.update(api_key: SecureRandom.hex(26))
         render json: UsersSerializer.new(user), status: :created
       else
         render status: :bad_request, body: user.errors.full_messages.to_sentence

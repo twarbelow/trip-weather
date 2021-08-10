@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 09 Aug 2021 15:57:45 GMT
+      - Tue, 10 Aug 2021 17:04:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
@@ -31,9 +31,9 @@ http_interactions:
       Etag:
       - W/"d70d0ea09986c27f0cb60307ef36f636"
       X-Request-Id:
-      - 39ec6122-6b13-44aa-a1ba-304c7cf7df05
+      - 86c540c2-85a5-43fc-a28e-d46699ae2154
       X-Runtime:
-      - '0.032626'
+      - '0.033941'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Vary:
@@ -55,5 +55,5 @@ http_interactions:
         States","longitude":"-104.9872737","latitude":"39.74350567","phone":"3035786754","website_url":"http://www.grandmasbeer.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":8598,"obdb_id":"banded-oak-brewing-company-denver","name":"Banded
         Oak Brewing Company","brewery_type":"brewpub","street":"470 N Broadway","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80203-3404","country":"United
         States","longitude":"-104.9874187","latitude":"39.7282897","phone":"7204798033","website_url":"http://Bandedoakbrewing.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"}]'
-  recorded_at: Mon, 09 Aug 2021 15:57:45 GMT
+  recorded_at: Tue, 10 Aug 2021 17:04:26 GMT
 recorded_with: VCR 6.0.0

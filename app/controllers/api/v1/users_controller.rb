@@ -7,6 +7,8 @@ class Api::V1::UsersController < ApplicationController
       else
         render status: :bad_request, body: user.errors.full_messages.to_sentence
       end
+    else
+      render status: :bad_request
     end
   end
 

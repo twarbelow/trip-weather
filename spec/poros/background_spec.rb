@@ -13,7 +13,7 @@ RSpec.describe Background do
 
       object = Background.new(data, "denver,co")
 
-      expect(object).to have_attributes(location: "denver,co", description: data[:description], image_url: data[:urls][:full], credit: {source: "Unsplash", author: data[:user][:name]})
+      expect(object).to have_attributes(location: "denver,co", description: data[:description], image_url: data[:urls][:full], credit: {source: "unsplash.com", author: data[:user][:name]})
     end
   end
 end

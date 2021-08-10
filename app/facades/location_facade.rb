@@ -4,7 +4,7 @@ class LocationFacade
     response[:results].first[:locations].first[:latLng]
   end
 
-  # def self.calculate_travel_time(origin, destination)
-  #
-  # end
+  def self.calculate_travel_time(origin, destination)
+    GeoService.get_travel_time(origin, destination)
+  end
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe '/api/v1/sessions' do
   it 'creates a new session when a user logs in with proper credentials' do
-    user = create(user, password: 'password')
+    user = create(:user, password: 'password')
     body_data = {
                   email: user.email,
                   password: user.password,

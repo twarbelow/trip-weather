@@ -15,7 +15,7 @@ RSpec.describe '/api/v1/sessions' do
 
     post '/api/v1/sessions', headers: headers, params: JSON.generate(body_data)
 
-    expect(response).to eq(200)
+    expect(response.status).to eq(200)
 
     parsed = JSON.parse(response.body, symbolize_names: true)
 

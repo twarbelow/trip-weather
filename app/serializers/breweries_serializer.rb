@@ -1,4 +1,5 @@
 class BreweriesSerializer
   include JSONAPI::Serializer
-  attributes :id, :type, :destination, :forecast, :breweries
+  attributes :type, :destination, :forecast, :breweries
+  set_id {nil}
 end

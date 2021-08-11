@@ -30,4 +30,37 @@ RSpec.describe '/api/v1/road_trip' do
     expect(parsed[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Numeric)
     expect(parsed[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
   end
+
+  it 'returns invalid credentials response if api key is not present' do
+    body = {
+      origin: 'denver,co',
+      destination: 'pueblo,co'
+    }
+
+    headers = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(body)
+
+    expect(response.status).to eq(401)
+  end
+
+  it 'returns invalid credentials response if api ky is not valid' do
+    body = {
+      origin: 'denver,co',
+      destination: 'pueblo,co',
+      api_key: 'nonsensekey'
+    }
+
+    headers = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(body)
+
+    expect(response.status).to eq(401)
+  end
 end

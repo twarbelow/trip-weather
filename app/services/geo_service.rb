@@ -7,8 +7,6 @@ class GeoService
     parse("/directions/v2/route?from=#{origin}&to=#{destination}")
   end
 
-  private
-
   def self.conn
     Faraday.new(url: 'http://www.mapquestapi.com') do |req|
       req.params['key'] = ENV['GEO_API_KEY']

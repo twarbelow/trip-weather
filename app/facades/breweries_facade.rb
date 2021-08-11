@@ -7,7 +7,7 @@ class BreweriesFacade
     breweries = brew_response.map do |brewery|
       Brewery.new(brewery)
     end
-    
+
     CityBreweries.new(location, forecast, breweries)
   end
 end

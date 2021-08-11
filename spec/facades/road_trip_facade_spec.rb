@@ -12,7 +12,7 @@ RSpec.describe 'RoadTrip Facade' do
       expect(trip.start_city).to eq(params[:origin])
       expect(trip.end_city).to eq(params[:destination])
       expect(trip.travel_time).to be_a(String)
-      expect(trip.weather_at_eta.keys).to include(:temperature, :conditions)
+      expect(trip.weather_at_eta.keys).to contain_exactly(:temperature, :conditions)
       expect(trip.weather_at_eta[:temperature]).to be_a(Float)
       expect(trip.weather_at_eta[:conditions]).to be_a(String)
     end

@@ -1,4 +1,6 @@
 class Api::V1::RoadTripController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :create
+
   def create
     if User.find_by(api_key: params[:api_key])
       trip = RoadTripFacade.create_trip(params[:origin], params[:destination])

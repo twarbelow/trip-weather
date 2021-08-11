@@ -20,10 +20,10 @@ RSpec.describe '/api/v1/sessions' do
     parsed = JSON.parse(response.body, symbolize_names: true)
 
     expect(parsed).to have_key(:data)
-    expect(parsed[:data].keys).to include(:type, :id, :attributes)
+    expect(parsed[:data].keys).to contain_exactly(:type, :id, :attributes)
     expect(parsed[:data][:type]).to eq('users')
     expect(parsed[:data][:id]).to eq(user.id.to_s)
-    expect(parsed[:data][:attributes].keys).to include(:email, :api_key)
+    expect(parsed[:data][:attributes].keys).to contain_exactly(:email, :api_key)
     expect(parsed[:data][:attributes][:email]).to eq(user.email)
     expect(parsed[:data][:attributes][:api_key]).to eq(user.api_key)
   end

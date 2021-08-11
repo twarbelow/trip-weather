@@ -22,10 +22,10 @@ RSpec.describe 'User Registration' do
     result = JSON.parse(response.body, symbolize_names: true)
 
     expect(result).to have_key(:data)
-    expect(result[:data].keys).to include(:id, :type, :attributes)
+    expect(result[:data].keys).to contain_exactly(:id, :type, :attributes)
     expect(result[:data][:id]).to be_a(String)
     expect(result[:data][:type]).to eq('users')
-    expect(result[:data][:attributes].keys).to include(:email, :api_key)
+    expect(result[:data][:attributes].keys).to contain_exactly(:email, :api_key)
     expect(result[:data][:attributes][:email]).to eq(body_data[:email])
     expect(result[:data][:attributes][:api_key]).to be_a(String)
   end

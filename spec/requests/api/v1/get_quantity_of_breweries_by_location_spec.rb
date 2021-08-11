@@ -8,10 +8,10 @@ RSpec.describe '/api/v1/forecast?location=denver,co' do
 
     parsed = JSON.parse(response.body, symbolize_names: true)
     expect(parsed).to have_key(:data)
-    expect(parsed[:data].keys).to include(:id, :type, :attributes)
+    expect(parsed[:data].keys).to contain_exactly(:id, :type, :attributes)
     expect(parsed[:data][:id]).to eq("null")
     expect(parsed[:data][:type]).to eq('breweries')
-    expect(parsed[:data][:attributes].keys).to include(:destination, :forecast, :breweries)
+    expect(parsed[:data][:attributes].keys).to contain_exactly(:id, :type, :destination, :forecast, :breweries)
 
     destination = parsed[:data][:attributes][:destination]
     expect(destination).to be_a(String)
@@ -19,12 +19,13 @@ RSpec.describe '/api/v1/forecast?location=denver,co' do
 
     forecast = parsed[:data][:attributes][:forecast]
     expect(forecast).to be_a(Hash)
-    expect(forecast.keys).to include(:summary, :temperature)
+    expect(forecast.keys).to contain_exactly(:summary, :temperature)
 
     breweries = parsed[:data][:attributes][:breweries]
     expect(breweries).to be_an(Array)
     expect(breweries.count).to eq(5)
     expect(breweries.first).to be_a(Hash)
-    expect(breweries.first.keys).to include(:id, :name, :brewery_type)
+    expect(breweries.first.keys).to contain_exactly(:id, :name, :brewery_type)
   end
+
 end

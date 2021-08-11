@@ -1,6 +1,8 @@
 module Api
   module V1
     class UsersController < ApplicationController
+      
+      skip_before_action :verify_authenticity_token, only: :create
       def create
         if user_params[:password] == user_params[:password_confirmation]
           user = User.new(user_params)

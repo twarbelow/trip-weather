@@ -196,6 +196,60 @@ Note: `location` is a required
 </code></pre>
 </details>
 
+### Find Nearby Breweries
+
+```
+GET /api/v1/breweries?location=<city,<state>&quantity=<number you want returned>
+```
+
+#### Response:
+<details>
+<pre><code>
+{
+    "data": {
+        "id": "null",
+        "type": "breweries",
+        "attributes": {
+            "id": "null",
+            "type": "breweries",
+            "destination": "denver,co",
+            "forecast": {
+                "summary": "scattered clouds",
+                "temperature": "297.96 F"
+            },
+            "breweries": [
+                {
+                    "id": 8962,
+                    "name": "Black Beak Brewing",
+                    "brewery_type": "planning"
+                },
+                {
+                    "id": 8245,
+                    "name": "Aero Craft Brewing",
+                    "brewery_type": "planning"
+                },
+                {
+                    "id": 13467,
+                    "name": "Pints Pub Brewery and Freehouse",
+                    "brewery_type": "brewpub"
+                },
+                {
+                    "id": 11093,
+                    "name": "Grandma's House",
+                    "brewery_type": "micro"
+                },
+                {
+                    "id": 8598,
+                    "name": "Banded Oak Brewing Company",
+                    "brewery_type": "brewpub"
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+</details>
+
 ### User Registration
 
 ```

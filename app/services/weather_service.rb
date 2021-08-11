@@ -4,6 +4,7 @@ class WeatherService
       req.params['appid'] = ENV['WEATHER_API_KEY']
       req.params['lat'] = lat
       req.params['lon'] = lng
+      req.params['units'] = 'imperial'
     end
 
     JSON.parse(response.body, symbolize_names: true)

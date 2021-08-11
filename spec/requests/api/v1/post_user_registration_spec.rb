@@ -29,4 +29,42 @@ RSpec.describe 'User Registration' do
     expect(result[:data][:attributes][:email]).to eq(body_data[:email])
     expect(result[:data][:attributes][:api_key]).to be_a(String)
   end
+
+  it 'returns bad request if email is already in use' do
+    create(:user, email: 'test@app.com')
+
+    body_data = {
+                  email: "test@app.com",
+                  password: "password",
+                  password_confirmation: "password"
+                }
+
+    headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(body_data)
+
+    expect(response.status).to eq(400)
+  end
+
+  it 'returns bad request if password and confirmation do not match' do
+    user = create(:user)
+
+    body_data = {
+                  email: user.email,
+                  password: user.password,
+                  password_confirmation: "pickles"
+                }
+
+    headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(body_data)
+
+    expect(response.status).to eq(401)
+  end
 end

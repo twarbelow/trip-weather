@@ -9,7 +9,7 @@ class Api::V1::UsersController < ApplicationController
         render status: :bad_request, body: user.errors.full_messages.to_sentence
       end
     else
-      render status: :bad_request
+      render status: :unauthorized, body: 'Invalid Credentials'
     end
   end
 

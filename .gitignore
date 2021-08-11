@@ -33,4 +33,4 @@
 /coverage
 
 # Ignore cassettes
-/spec/fixtures/vcs_cassettes
+/spec/fixtures/

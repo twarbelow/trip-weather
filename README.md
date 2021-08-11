@@ -1,11 +1,11 @@
-# README
+# Trip Weather
 Trip Weather is the [final solo project](https://backend.turing.edu/module3/projects/sweater_weather/) for Backend Mod 3 at the Turing School of Software and Design. This API is intended to be the backend for an application that plans roadtrips and incorporates weather data. An additional endpoint was added as a 3 hr challenge that finds nearby breweries. This project consumes data from the following APIs
 - [OpenWeather](https://openweathermap.org/api/one-call-api)
 - [Mapquest](https://developer.mapquest.com/documentation/geocoding-api/)
 - [Unsplash](https://unsplash.com/developers)
 - [Open Brewery DB](https://www.openbrewerydb.org/) (does not require an api key)
 
-### Setup
+## Setup
 ### Prerequisites
 - Ruby: 2.7.2
 - Rails 5.2.5
@@ -29,7 +29,7 @@ $ bundle exec figaro install
 -  to hit your endpoints through Postman or similar, run `rails s` in your terminal
 -  to run the test suite run `bundle exec rspec` in your terminal
 
-### Endpoints
+## Endpoints
 With your `rails s` running locally all of these endpoints should be prefaced
 with `localhost:3000` (the default port for the rails server)
 

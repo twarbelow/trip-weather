@@ -11,7 +11,7 @@ RSpec.describe '/api/v1/backgrounds?' do
     expect(result[:data][:id]).to eq(nil)
     expect(result[:data][:type]).to eq('background')
     expect(result[:data][:attributes]).to be_a(Hash)
-    expect(result[:data][:attributes].keys).to contain_exactly(:image_url, :description, :credit, :location)
+    expect(result[:data][:attributes].keys).to contain_exactly(:id, :image_url, :description, :credit, :location)
     expect(result[:data][:attributes][:image_url]).to be_a(String)
     expect(result[:data][:attributes][:description]).to be_a(String)
     expect(result[:data][:attributes][:credit]).to be_a(Hash)

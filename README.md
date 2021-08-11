@@ -51,33 +51,24 @@ Note: `location` is a required
         "type": "forecast",
         "attributes": {
             "current_weather": {
-                "datetime": "2021-08-10 20:26:29 -0700",
-                "sunrise": "2021-08-10 05:07:41 -0700",
-                "sunset": "2021-08-10 19:02:56 -0700",
-                "temperature": 298.99,
-                "feels_like": 298.28,
-                "humidity": 25,
-                "uvi": 0,
+                "datetime": "2021-08-11 11:20:56 -0700",
+                "sunrise": "2021-08-11 05:08:38 -0700",
+                "sunset": "2021-08-11 19:01:41 -0700",
+                "temperature": 88.14,
+                "feels_like": 84.63,
+                "humidity": 20,
+                "uvi": 9,
                 "visibility": 10000,
-                "conditions": "scattered clouds",
-                "icon": "03n"
+                "conditions": "clear sky",
+                "icon": "01d"
             },
             "daily_weather": [
-                {
-                    "date": "2021-08-10",
-                    "sunrise": "2021-08-10T05:07:41.000-07:00",
-                    "sunset": "2021-08-10T19:02:56.000-07:00",
-                    "max_temp": 307.99,
-                    "min_temp": 295.1,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
                 {
                     "date": "2021-08-11",
                     "sunrise": "2021-08-11T05:08:38.000-07:00",
                     "sunset": "2021-08-11T19:01:41.000-07:00",
-                    "max_temp": 309.31,
-                    "min_temp": 295.78,
+                    "max_temp": 95.74,
+                    "min_temp": 72.9,
                     "conditions": "clear sky",
                     "icon": "01d"
                 },
@@ -85,8 +76,8 @@ Note: `location` is a required
                     "date": "2021-08-12",
                     "sunrise": "2021-08-12T05:09:35.000-07:00",
                     "sunset": "2021-08-12T19:00:25.000-07:00",
-                    "max_temp": 304.11,
-                    "min_temp": 297.11,
+                    "max_temp": 90.21,
+                    "min_temp": 73.89,
                     "conditions": "overcast clouds",
                     "icon": "04d"
                 },
@@ -94,69 +85,78 @@ Note: `location` is a required
                     "date": "2021-08-13",
                     "sunrise": "2021-08-13T05:10:32.000-07:00",
                     "sunset": "2021-08-13T18:59:08.000-07:00",
-                    "max_temp": 307.29,
-                    "min_temp": 294.48,
-                    "conditions": "light rain",
+                    "max_temp": 92.82,
+                    "min_temp": 69.85,
+                    "conditions": "moderate rain",
                     "icon": "10d"
                 },
                 {
                     "date": "2021-08-14",
                     "sunrise": "2021-08-14T05:11:29.000-07:00",
                     "sunset": "2021-08-14T18:57:50.000-07:00",
-                    "max_temp": 307.74,
-                    "min_temp": 294.23,
+                    "max_temp": 93.34,
+                    "min_temp": 68.97,
+                    "conditions": "few clouds",
+                    "icon": "02d"
+                },
+                {
+                    "date": "2021-08-15",
+                    "sunrise": "2021-08-15T05:12:27.000-07:00",
+                    "sunset": "2021-08-15T18:56:31.000-07:00",
+                    "max_temp": 97.61,
+                    "min_temp": 72.86,
                     "conditions": "few clouds",
                     "icon": "02d"
                 }
             ],
             "hourly_weather": [
                 {
-                    "time": "20:00:00",
-                    "temperature": 298.99,
-                    "conditions": "scattered clouds",
-                    "icon": "03n"
-                },
-                {
-                    "time": "21:00:00",
-                    "temperature": 299.52,
-                    "conditions": "scattered clouds",
-                    "icon": "03n"
-                },
-                {
-                    "time": "22:00:00",
-                    "temperature": 299.76,
-                    "conditions": "scattered clouds",
-                    "icon": "03n"
-                },
-                {
-                    "time": "23:00:00",
-                    "temperature": 299.42,
-                    "conditions": "scattered clouds",
-                    "icon": "03n"
-                },
-                {
-                    "time": " 0:00:00",
-                    "temperature": 298.72,
+                    "time": "11:00:00",
+                    "temperature": 88.14,
                     "conditions": "clear sky",
-                    "icon": "01n"
+                    "icon": "01d"
                 },
                 {
-                    "time": " 1:00:00",
-                    "temperature": 297.88,
+                    "time": "12:00:00",
+                    "temperature": 88.97,
                     "conditions": "clear sky",
-                    "icon": "01n"
+                    "icon": "01d"
                 },
                 {
-                    "time": " 2:00:00",
-                    "temperature": 297.3,
+                    "time": "13:00:00",
+                    "temperature": 90.7,
                     "conditions": "clear sky",
-                    "icon": "01n"
+                    "icon": "01d"
                 },
                 {
-                    "time": " 3:00:00",
-                    "temperature": 296.85,
+                    "time": "14:00:00",
+                    "temperature": 92.71,
                     "conditions": "clear sky",
-                    "icon": "01n"
+                    "icon": "01d"
+                },
+                {
+                    "time": "15:00:00",
+                    "temperature": 94.59,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "time": "16:00:00",
+                    "temperature": 95.74,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "time": "17:00:00",
+                    "temperature": 94.57,
+                    "conditions": "few clouds",
+                    "icon": "02d"
+                },
+                {
+                    "time": "18:00:00",
+                    "temperature": 92.05,
+                    "conditions": "broken clouds",
+                    "icon": "04d"
                 }
             ]
         }

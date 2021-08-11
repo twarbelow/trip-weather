@@ -6,6 +6,6 @@ class Background
     @location = location
     @description = data[:description]
     @image_url = data[:urls][:full]
-    @credit = {source: "unsplash.com", author: data[:user][:name]}
+    @credit = { source: 'unsplash.com', author: data[:user][:name] }
   end
 end

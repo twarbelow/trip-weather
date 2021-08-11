@@ -23,7 +23,7 @@ RSpec.describe '/api/v1/road_trip' do
     expect(parsed[:data].keys).to contain_exactly(:id, :type, :attributes)
     expect(parsed[:data][:id]).to eq(nil)
     expect(parsed[:data][:type]).to eq('roadtrip')
-    expect(parsed[:data][:attributes].keys).to contain_exactly(:id, :type, :start_city, :end_city, :travel_time, :weather_at_eta)
+    expect(parsed[:data][:attributes].keys).to contain_exactly(:start_city, :end_city, :travel_time, :weather_at_eta)
     expect(parsed[:data][:attributes][:start_city]).to eq(body[:origin])
     expect(parsed[:data][:attributes][:end_city]).to eq(body[:destination])
     expect(parsed[:data][:attributes][:weather_at_eta].keys).to contain_exactly(:temperature, :conditions)

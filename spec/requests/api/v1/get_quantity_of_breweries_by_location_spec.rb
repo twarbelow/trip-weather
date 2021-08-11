@@ -11,7 +11,7 @@ RSpec.describe '/api/v1/forecast?location=denver,co' do
     expect(parsed[:data].keys).to contain_exactly(:id, :type, :attributes)
     expect(parsed[:data][:id]).to eq(nil)
     expect(parsed[:data][:type]).to eq('breweries')
-    expect(parsed[:data][:attributes].keys).to contain_exactly(:type, :destination, :forecast, :breweries)
+    expect(parsed[:data][:attributes].keys).to contain_exactly(:destination, :forecast, :breweries)
 
     destination = parsed[:data][:attributes][:destination]
     expect(destination).to be_a(String)

@@ -7,8 +7,6 @@ RSpec.describe 'RoadTrip Facade' do
       trip = RoadTripFacade.create_trip(params[:origin], params[:destination])
 
       expect(trip).to be_a(Roadtrip)
-      expect(trip.id).to eq(nil)
-      expect(trip.type).to eq('roadtrip')
       expect(trip.start_city).to eq(params[:origin])
       expect(trip.end_city).to eq(params[:destination])
       expect(trip.travel_time).to be_a(String)

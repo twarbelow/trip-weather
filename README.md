@@ -6,7 +6,7 @@ Trip Weather is the [final solo project](https://backend.turing.edu/module3/proj
 - [Open Brewery DB](https://www.openbrewerydb.org/) (does not require an api key)
 
 ### Setup
-#### Prerequisites
+### Prerequisites
 - Ruby: 2.7.2
 - Rails 5.2.5
 - API keys for [Unsplash](https://unsplash.com/documentation#search-photos),
@@ -14,7 +14,7 @@ Trip Weather is the [final solo project](https://backend.turing.edu/module3/proj
   and [OpenWeather](https://openweathermap.org/api/one-call-api#data)
 
 
-#### Local Setup
+### Local Setup
 ```
 $ git clone git@github.com:twarbelow/trip-weather.git
 $ cd trip-weather
@@ -29,7 +29,7 @@ $ bundle exec figaro install
 -  to hit your endpoints through Postman or similar, run `rails s` in your terminal
 -  to run the test suite run `bundle exec rspec` in your terminal
 
-#### Endpoints
+### Endpoints
 With your `rails s` running locally all of these endpoints should be prefaced
 with `localhost:3000` (the default port for the rails server)
 

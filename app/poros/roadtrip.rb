@@ -15,8 +15,8 @@ class Roadtrip
   def temp_and_conditions(forecast, route_time)
     arrival = (forecast[:current][:dt] + route_time)
     forecast_for_eta = forecast[:hourly].find do |hour|
-      hour[:dt] == (arrival/3600).to_i * 3600
+      hour[:dt] == (arrival / 3600).to_i * 3600
     end
-    { temperature: forecast_for_eta[:temp], conditions: forecast_for_eta[:weather].first[:description]}
+    { temperature: forecast_for_eta[:temp], conditions: forecast_for_eta[:weather].first[:description] }
   end
 end

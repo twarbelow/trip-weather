@@ -5,7 +5,7 @@ class WeatherService
       req.params['lat'] = lat
       req.params['lon'] = lng
     end
-    
+
     JSON.parse(response.body, symbolize_names: true)
   end
 end
